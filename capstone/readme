@@ -1,0 +1,3 @@
+put the webpage and its styling content  in htdocs folder of xamp before starting
+The website is hosted on xamp to run it properly start xamp and start mysql and apahce then open the webpage on any browser and run the website with this link
+localhost/foldername/track1.php
