@@ -2,6 +2,7 @@
 <html>
 <head>
     <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?php include 'link/links.php'; ?>
     <?php include 'css/style.php'; ?>
 </head>
@@ -49,8 +50,7 @@
 <div class="table-responsive">
 <table class="table table-bordered table-stripped text-center">
 <tr style="background-color:#c04000;color:white;">
-<th>Country</th>
-<th>State</th>
+<th width="20%">State</th>
 <th>Confirmed</th>
 <th>Active</th>
 <th>Recovered</th>
@@ -61,16 +61,24 @@ $data=file_get_contents('https://api.covid19india.org/data.json');
 $coronalive=json_decode($data,true);
 $statescount=count($coronalive['statewise']);
 $i=1;
+$total_confirm=0;
+$total_active=0;
+$total_recovered=0;
+$total_death=0;
 while($i<$statescount){
+    $state_check=$coronalive['statewise'][$i]['state'];
+    if ($state_check !="State Unassigned"){
     ?>
+
     <tr>
-    <td><?php echo $coronalive['statewise'][$i]['lastupdatedtime'] ?></td>
-    <td><?php echo $coronalive['statewise'][$i]['state'] ?></td>
-    <td><?php echo $coronalive['statewise'][$i]['confirmed'] ?></td>
-    <td><?php echo $coronalive['statewise'][$i]['active'] ?></td>
-    <td><?php echo $coronalive['statewise'][$i]['recovered'] ?></td>
-    <td><?php echo $coronalive['statewise'][$i]['deaths'] ?></td>
+    <td width="20%"><?php echo $coronalive['statewise'][$i]['state'] ?></td>
+    <td><?php $conf=$coronalive['statewise'][$i]['confirmed']; echo $conf ;$total_confirm=$total_confirm+(int)$conf?></td>
+    <td><?php $act=$coronalive['statewise'][$i]['active'];echo $act;$total_active=$total_active + (int)$act  ?></td>
+    <td><?php $rec= $coronalive['statewise'][$i]['recovered'];echo $rec;$total_recovered=$total_recovered+ (int)$rec ?></td>
+    <td><?php $deat= $coronalive['statewise'][$i]['deaths'];echo $deat;$total_death=$total_death+ (int)$deat ?></td>
+    
     </tr>
+    
 <!--echo $coronalive['statewise'][$i]['lastupdatedtime'] ."<br>";
 echo $coronalive['statewise'][$i]['state']."<br>";
 echo $coronalive['statewise'][$i]['confirmed']."<br>";
@@ -78,13 +86,42 @@ echo $coronalive['statewise'][$i]['active']."<br>";
 echo $coronalive['statewise'][$i]['recovered']."<br>";
 echo $coronalive['statewise'][$i]['deaths']."<br>";-->
 <?php
+}
 $i++;
 }
 ?>
-
 </table>
 </div>
 </div>
+<!-- for card -->
+<div class="card_row">
+  <div class="card_column">
+    <div style="color:red" class="card">
+    <h5>Confirmed</h5>
+    <h4><?php echo $total_confirm ?><h4>
+    </div>
+  </div>
+  <div class="card_column">
+    <div style="color:blue" class="card">
+    <h5>Active</h5>
+    <h4><?php echo $total_active ?><h4>
+    </div>
+  </div>
+  <div class="card_column">
+    <div style="color:green" class="card">
+    <h5>Recovered</h5>
+    <h4><?php echo $total_recovered ?><h4>
+    </div>
+  </div>
+  <div style="color:purple" class="card_column">
+    <div class="card">
+    <h5>Death</h5>
+    <h4><?php echo $total_death ?><h4>
+      </div>
+  </div>
+</div>
+
+<!--  -->
 </section>
 <div class="container-fluid sub_section pt-5 pb-5" id="aboutid">
 <div class="section_header text-center mb-5 mt-4">
