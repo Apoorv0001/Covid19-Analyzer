@@ -48,7 +48,7 @@ tr:nth-child(odd){
     background-color:#ffc300;
 }
 
-/* for card */
+/* for_card */
 * {
   box-sizing: border-box;
 }
