@@ -1,3 +1,7 @@
-put the webpage and its styling content  in htdocs folder of xamp before starting
-The website is hosted on xamp to run it properly start xamp and start mysql and apahce then open the webpage on any browser and run the website with this link
-localhost/foldername/track1.php
+The website is run on a local server using xamp
+first Put the capstone folder inside xamp directory htdocs folder
+Xamp is required to run the website 
+Open Xamp and turn on apache and mysql
+After that open the main website using this link http://localhost/capstone/track1.php on a browser
+For the Blog open the blog page using this link http://localhost/capstone/blog.html or go to through the main website
+
