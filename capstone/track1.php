@@ -8,15 +8,18 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg nav_style p-3">
-  <a class="navbar-brand pl-5" href="#">COVID-19 Anlyzer</a>
+  <a class="navbar-brand pl-5" href="#">COVID-19 Analyzer</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
+    <li class="nav-item active">
+        <a class="nav-link" href="track1.php">Home<span class="sr-only">(current)</span></a>
+      </li>
       <li class="nav-item active">
-        <a class="nav-link" href="blog.html">Blog <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="blog.html">Blog<span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
@@ -148,7 +151,7 @@ Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS).The<br> most recent
 </div>
 <div class="container-fluid pt-5 pb-5" id="aboutid">
 <div class="section_header text-center mb-5 mt-4">
-     <h1>Coronaviruse symptoms</h1>
+     <h1>Coronavirus symptoms</h1>
 </div>
 <div class="container">
 <div class="row">
@@ -190,6 +193,20 @@ Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS).The<br> most recent
 </div>
 </div>
 </div>
+<br>
+<br>
+<section id="lab_social_icon_footer">
+<!-- Include Font Awesome Stylesheet in Header -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+        <div class="text-center center-block">
+                <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	            <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+	            <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+	            <a href="mailto:#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+    </div>
+</div>
+</section>
 </body>
 </html>
 
