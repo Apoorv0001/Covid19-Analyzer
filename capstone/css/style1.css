@@ -1,3 +1,9 @@
+.nav_style {
+  background-color: #d22b2b !important;
+}
+.nav_style a {
+  color: white;
+}
 body {
   font-family: Arial;
   margin: 0;
@@ -34,15 +40,6 @@ h2 {
   float: left;
   width: 75%;
 }
-.thumbnail:hover {
-  position: relative;
-  top: -25px;
-  left: -35px;
-  width: 100px;
-  height: auto;
-  display: block;
-  z-index: 999;
-}
 .right-column {
   width: 25%;
   float: right;
@@ -67,59 +64,4 @@ footer {
   padding: 20px;
   text-align: center;
   margin-top: 20px;
-}
-
-/*responsive */
-
-@media (max-width: 800px) {
-  .left-column,
-  .right-column {
-    width: 100%;
-    padding: 0px;
-  }
-}
-/* Style the Sticky icons on web page */
-.stickyicon-list {
-  position: fixed;
-  top: 200px;
-  transform: translateY(-50%);
-}
-.stickyicon-list a {
-  display: block;
-  text-align: center;
-  padding: 8px;
-  transition: all 0.5s ease;
-  color: white;
-  font-size: 20px;
-}
-/* HOver affect on sticky social media icons */
-.stickyicon-list a:hover {
-  color: #000;
-  width: 10px;
-}
-
-/* Now we have to design each icon of social media */
-.facebook {
-  background: #3b5998;
-  color: white;
-}
-.twitter {
-  color: white;
-  background: #00acee;
-}
-.linkedin {
-  background: #0e76a8;
-  color: white;
-}
-.google {
-  color: white;
-  background: #db4a39;
-}
-.instagram {
-  background: #3f729b;
-  color: white;
-}
-.youtube {
-  color: white;
-  background: #c4302b;
 }
