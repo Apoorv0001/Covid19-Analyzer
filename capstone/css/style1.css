@@ -1,5 +1,7 @@
 .nav_style {
   background-color: #d22b2b !important;
+  overflow: auto;
+  padding: 7.5px 25px;
 }
 .nav_style a {
   color: white;
@@ -58,7 +60,6 @@ h2 {
 .right-column .card img {
   margin-bottom: 10px;
 }
-
 footer {
   background-color: #f08080;
   padding: 20px;

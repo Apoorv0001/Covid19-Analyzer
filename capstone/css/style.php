@@ -93,8 +93,9 @@ body {
 
 /*  */
 #lab_social_icon_footer {
-  padding: 60px;
-  background-color:   #daf7a6  ;
+  width:100%;
+  padding: 80px 200px;
+  background-color:   #f1948a  ;
 }
 
 #lab_social_icon_footer a {
